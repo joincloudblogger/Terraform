@@ -1,0 +1,31 @@
+# File Name: main.tf 
+
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "4.36.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+
+  subscription_id = "Please Enter Id"
+  tenant_id       = "Please Enter Id"
+  client_id       = "Please Enter Id"
+  client_secret   = "Please Enter Id"
+}
+
+resource "azurerm_resource_group" "cloudblogger" {
+  name     = "cb-rg"
+  location = "Central India"
+}
+
+
+
+##############
+Terraform init
+terraform plan -out main.tfplan
+terraform apply "main.tfplan"
