@@ -1,0 +1,17 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "4.36.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+
+  subscription_id = "Please Enter Your ID"
+  tenant_id       = "Please Enter Your ID"
+  client_id       = "Please Enter Your ID"
+  client_secret   = "Please Enter Your ID"
+}
